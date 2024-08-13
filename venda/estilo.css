@@ -1,0 +1,504 @@
+:root {
+    --primary-color: #394ea1;
+    --secondary-color: #fd5e41;
+    --accent-color: #f7ae34;
+    --tertiary-color: #f294a0;
+    --quartenary-color: #89d8ce;
+}
+
+.secondaria {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.primaria{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.primaria:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+
+.secondaria:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+.borda-primaria{
+    border-color: var(--primary-color);
+}
+
+
+body {
+    padding-top: 119px;
+}
+
+
+@media (max-width: 992px) {
+    body {
+        padding-top: 85px;
+        /* Padding menor para telas menores */
+    }
+}
+
+/*** Topbar Start ***/
+.fixed-top {
+    transition: 0.5s;
+    background: white;
+    border: 0;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.topbar {
+    padding: 10px;
+    border-radius: 230px 100px;
+    background-color: var(--primary-color);
+}
+
+.topbar .top-info {
+    font-size: 15px;
+    line-height: 0;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.topbar .top-link {
+    font-size: 15px;
+    line-height: 0;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.topbar .top-link a {
+    letter-spacing: 1px;
+}
+
+.topbar .top-link a small:hover {
+    color: var(--secondary-color) !important;
+    transition: 0.5s;
+}
+
+/*** Topbar End ***/
+
+/*** Navbar Start ***/
+.navbar .navbar-nav .nav-link {
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: .5s;
+}
+
+.navbar {
+    height: 85px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active,
+.fixed-top.bg-white .navbar .navbar-nav .nav-link:hover,
+.fixed-top.bg-white .navbar .navbar-nav .nav-link.active {
+    color: var(--secondary-color);
+}
+
+#navbar a.active {
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@media (min-width: 1200px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        transition: .5s;
+        opacity: 0;
+    }
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: var(--primary-color);
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    background: var(--secondary-color) !important;
+    border-radius: 10px !important;
+    transition: .5s;
+    opacity: 1;
+}
+
+
+/*** Navbar End ***/
+
+.page-header {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg_1.jpg);
+    background-position: 50% 35%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+    padding-top: 6rem;
+}
+
+.detalhes {
+    padding-top: 10px;
+}
+
+footer {
+    
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+  /* Remover bordas do card */
+  .card {
+    border: none;
+}
+/* Estilo dos botões de opções */
+.list-group-item {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.list-group-item.active {
+    background-color: var(--primary-color);
+    font-weight: bold;
+}
+/* Ocultar conteúdos não selecionados por padrão */
+.conteudo {
+    display: none;
+}
+
+/* botao de adicionar pet na pag ususario*/
+.btn-floating {
+    border-radius: 50%;
+}
+
+/* imagem pet na pag usuario */
+.img-circle {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: 100px; /* Ajuste o tamanho conforme necessário */
+}
+
+/* Remove o sublinhado do link */
+.card-body a {
+    text-decoration: none;
+}
+
+/* INCREMENTO LOJA */
+
+.input-group.quantity {
+    width: 100px;
+}
+.input-group-btn button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-group-btn button i {
+    margin: 0;
+}
+.input-group input {
+    text-align: center;
+}
+
+#error-message {
+    display: block;
+    background-color: #f8d7da; /* Cor de fundo para destacar */
+    color: #721c24; /* Cor do texto */
+    border: 1px solid #f5c6cb; /* Borda */
+    border-radius: 0.375rem; /* Arredondamento das bordas */
+    padding: 1rem; /* Espaçamento interno */
+    margin-top: 1rem; /* Espaçamento superior */
+    font-size: 1.125rem; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    text-align: center; /* Centraliza o texto */
+} 
+
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+
+/* CATEGORIA LOJA */ 
+.azul {
+    color:#394ea1; /* Aplica a cor primária à classe categoria */
+    
+}
+
+.azul:hover {
+    color:#fd5e41; /* Aplica a cor secundária ao hover */
+}
+
+
+
+
+/* ITENS DA LOJA (TROCAR NOME FRUIT)*/ 
+
+.fruite .fruite-item {
+    height: 100%;
+    transition: 0.5s;
+}
+.fruite .fruite-item:hover {
+    box-shadow: 0 0 55px rgba(0, 0, 0, 0.4);
+}
+
+.fruite .fruite-item .fruite-img {
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid ;
+    border-bottom: none;
+    height: 200px; /* Altura fixa para a imagem */
+    width: 100%; /* Largura total */
+   
+}
+
+.fruite .fruite-item .fruite-img img {
+    transition: 0.5s;
+}
+
+.fruite .fruite-item .fruite-img img:hover {
+    transform: scale(1.3);
+}
+
+
+
+.rangeazul::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove a aparência padrão do controle deslizante */
+    appearance: none;
+    width: 16px; /* Largura da bolinha do controle deslizante */
+    height: 16px; /* Altura da bolinha do controle deslizante */
+    background: var(--primary-color); /* Cor da bolinha do controle deslizante */
+    cursor: pointer; /* Cursor ao passar sobre a bolinha */
+    border-radius: 50%; /* Faz a bolinha ser redonda */
+}
+
+
+.cardcartegoria {
+    background-color: rgba(253, 94, 65, 0.5); /* #fd5e41 com 50% de opacidade */
+}
+
+.fontepoppins {
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+
+/* MULTI STEP FORM */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.formbold-main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+}
+
+.formbold-form-wrapper {
+  margin: 0 auto;
+  max-width: 550px;
+  width: 100%;
+  background: white;
+}
+
+.formbold-steps {
+  padding-bottom: 18px;
+  margin-bottom: 35px;
+  border-bottom: 1px solid #DDE3EC;
+}
+
+.formbold-steps ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.formbold-steps li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #536387;
+}
+
+.formbold-steps li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #DDE3EC;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #536387;
+}
+
+.formbold-steps li.active {
+  color: #07074D;
+}
+
+.formbold-steps li.active span {
+  background: #6A64F1;
+  color: #FFFFFF;
+}
+
+.formbold-input-flex {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.formbold-input-flex > div {
+  width: 100%;
+}
+
+.formbold-form-input {
+  width: 100%;
+  padding: 13px 22px;
+  border-radius: 5px;
+  border: 1px solid #DDE3EC;
+  background: #FFFFFF;
+  font-weight: 500;
+  font-size: 16px;
+  color: #536387;
+  outline: none;
+}
+
+.formbold-form-input:focus {
+  border-color: #6a64f1;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold-form-label {
+  color: #07074D;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.formbold-form-step-1,
+.formbold-form-step-2,
+.formbold-form-step-3,
+.formbold-form-step-4 {
+  display: none;
+}
+
+.formbold-form-step-1.active,
+.formbold-form-step-2.active,
+.formbold-form-step-3.active,
+.formbold-form-step-4.active {
+  display: block;
+}
+
+.formbold-form-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.formbold-back-btn {
+  cursor: pointer;
+  background: #FFFFFF;
+  border: none;
+  color: #07074D;
+  font-weight: 500;
+  font-size: 16px;
+  display: none;
+}
+
+.formbold-back-btn.active {
+  display: block;
+}
+
+.formbold-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 25px;
+  border: none;
+  font-weight: 500;
+  background-color: #6A64F1;
+  color: white;
+  cursor: pointer;
+}
+
+.formbold-btn:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+/* scrool */
+
+.scrollable-list {
+    max-height: 300px; /* Ajuste a altura conforme necessário */
+    overflow-y: auto;
+}
+
+
+/* CSS para as estrelas */
+.rating .star {
+    color: #ddd; /* Cor padrão das estrelas */
+    cursor: pointer;
+}
+
+.rating .star.selected,
+.rating .star:hover {
+    color: #f5c518; /* Cor das estrelas selecionadas */
+}
